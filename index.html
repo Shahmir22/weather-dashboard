@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
+      <span class="navbar-brand mb-0 text-center">Weather Dashboard</span>
+    </nav>
+    <div class="container" id="main-container">
+      <div class="row">
+        <div class="col-sm-4" id="search-sidebar"><h5 class="card-title">Search for a city name:</h5>
+            <form class="form-inline" id="search-history">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="city-input">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg></button>
+              </form>
+              <br>
+              <ul class="list-group" id="search-history-items">
+                <li class="list-group-item">Miami</li>
+                <li class="list-group-item">Albany</li>
+                <li class="list-group-item">Cleveland</li>
+              </ul>
+      </div>
+      <div class="col-sm-8" id="weather-dash">
+        <div class="row">
+        <div class="card" id="current-weather">
+            <div class="card-body col-sm-12">
+              <div class="row" id="header-row">
+                <p>Search for a city to view weather data.</p>
+              <!-- <h4 id="header-text"></h4> -->
+              <!-- jQ: <img> Current weather's icon -->
+              </div>
+              <div id="current-weather-data">
+                  <p> Current temperature:</p>
+                <p> Current humidity:</p> 
+                 <p> Current wind speed:</p></p>
+                <p>UV Index:</p> 
+                
+                 </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" ><h4 id="forecast-title"></h4></div>
+        <div class="row" id="forecast-row">
+          <!-- These are dynamically created in JS. Comments are for visual reference -->
+          <!-- <div class="card forecast card-body">
+                <h5>tomorrow</h5>
+                <hr />
+                <p>icon</p>
+                <p>Temperature</p>
+                <p>Humidity</p>
+            </div> -->
+          </div>
+      </div>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
