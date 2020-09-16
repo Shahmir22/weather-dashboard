@@ -9,14 +9,7 @@
 const apiKey = "&appid=84d5d594c8842f1a8ba61cc7db4edf08";
 var forecastUrl = "http://api.openweathermap.org/data/2.5/weather?q="
 var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q="
-var currentUvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" +
-    apiKey +
-    "&lat=" +
-    latitude +
-    "&lon=" +
-    longitude;
-// var cityLatitude = data.latitude
-// var cityLongitude = data.longitude
+var uvURL = "http://api.openweathermap.org/data/2.5/onecall?lat="
 
 $(document).ready(function () {
 
@@ -27,7 +20,7 @@ $(document).ready(function () {
         console.log(userInput);
         searchWeather(userInput);
         getForcast(userInput);
-        //currentUv(userInput);
+        currentUv(userInput);
     })
 
     //make a current weather ajax call
@@ -60,15 +53,20 @@ $(document).ready(function () {
         })
     }
 
-    // function currentUv(city) {
-    //     $.ajax({
-    //         type: "GET",
-    //         url: currentUvURL + city + apiKey + cityLatitude + cityLongitude
-    //     }).then(function (data) {
-    //         uvIndex
-    //         console.log(data);
-    //     })
-    // }
+    function currentUv(city) {
+        $.ajax({
+            type: "GET",
+            url: uvURL + apiKey
+        }).then(function (data) {
+            var cityLatitude = data.coord.lat;
+            var cityLongitude = data.coord.lon;
+            $("#forecast").text("5-day Forecast");
+            currentUVLabel = $("<span>").text("UV Index: ");
+            currentUVBadge = $("<span>").text(data.value);
+            console.log(data.value);
+            console.log(cityLatitude, cityLongitude);
+        })
+    }
 
 
 
