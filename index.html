@@ -22,13 +22,13 @@
     <div class="container" id="main-container">
       <div class="row">
         <div class="col-sm-4" id="search-sidebar"><h5 class="card-title">Search for a city name:</h5>
-            <form class="form-inline" id="search-history">
+            
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="city-input">
                 <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="search-btn"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                     <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                   </svg></button>
-              </form>
+              
               <br>
               <ul class="list-group" id="search-history-items">
                 <li class="list-group-item">Miami</li>
@@ -48,15 +48,15 @@
               <div id="current-weather-data">
                   <p> Current temperature:</p>
                 <p> Current humidity:</p> 
-                 <p> Current wind speed:</p></p>
-                <p>UV Index:</p> 
-                
+                 <p> Current wind speed:</p>
+                <p>UV Index:</p>
                  </div>
             </div>
           </div>
         </div>
         <div class="row" ><h4 id="forecast-title"></h4></div>
         <div class="row" id="forecast-row">
+            <h5 class="card-title">5 day forcast:</h5>
           <!-- These are dynamically created in JS. Comments are for visual reference -->
           <!-- <div class="card forecast card-body">
                 <h5>tomorrow</h5>
@@ -68,6 +68,7 @@
           </div>
       </div>
     </div>
-    <script src="" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
