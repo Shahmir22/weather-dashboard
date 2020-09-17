@@ -1,6 +1,6 @@
 const apiKey = "&appid=84d5d594c8842f1a8ba61cc7db4edf08";
-var forecastUrl = "http://api.openweathermap.org/data/2.5/weather?q="
-var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q="
+var forecastUrl = "https://api.openweathermap.org/data/2.5/weather?q="
+var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?q="
 
 
 $(document).ready(function () {
@@ -34,7 +34,7 @@ $(document).ready(function () {
     };
 
     function uvIndex(lat, lon) {
-        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon;
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon;
         $.ajax({
             type: "GET",
             url: uvURL + apiKey
